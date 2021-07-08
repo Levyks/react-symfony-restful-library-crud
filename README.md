@@ -14,7 +14,7 @@ Project made for learning purposes
 
 ## API:
 
-     Route      |      Method       |      Description      | 
+Route           |      Method       |      Description      | 
 --------------- | ----------------- | --------------------- | 
 /books          |       GET         | Get All               | 
 /books          |       POST        | Create New            | 
