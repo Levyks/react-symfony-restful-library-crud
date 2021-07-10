@@ -10,26 +10,31 @@ class Utils {
 
         url += path
 
-        url += '?'
+        if(parameters){
+            url += '?'
 
-        const paramKeys = Object.keys(parameters);
+            const paramKeys = Object.keys(parameters);
 
-        paramKeys.forEach(paramKey => {
+            paramKeys.forEach(paramKey => {
 
-            const param = parameters[paramKey];
+                const param = parameters[paramKey];
 
-            if(Array.isArray(param)){
-                param.forEach(element => {
-                    url += `${paramKey}[]=${element}&`
-                });
-                return;
-            }
+                if(Array.isArray(param)){
+                    param.forEach(element => {
+                        url += `${paramKey}[]=${encodeURIComponent(element)}&`
+                    });
+                    return;
+                }
 
-            url += `${paramKey}=${param}&`;
+                url += `${paramKey}=${encodeURIComponent(param)}&`;
 
-        });
-  
-        return url.slice(0, -1);
+            });
+    
+            url = url.slice(0, -1);
+        }
+        
+        return url;
+        
     }
 
 }

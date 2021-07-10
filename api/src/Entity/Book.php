@@ -87,21 +87,17 @@ class Book
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Gedmo\Mapping\Annotation\Timestampable(on="create")
      * @Groups({"book:read"})
      */
     private $createdAt;
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Gedmo\Mapping\Annotation\Timestampable(on="update")
      * @Groups({"book:read"})
      */
     private $updatedAt;
-
-    public function __construct()
-    {
-        $this->createdAt = new \DateTimeImmutable();
-        $this->updatedAt = new \DateTimeImmutable();
-    }
 
     //GETTERS
 
@@ -244,4 +240,5 @@ class Book
 
         return $this;
     }
+
 }
