@@ -23,23 +23,3 @@ function NavbarComponent() {
 }
 
 export default NavbarComponent;
-/* 
-<nav className="navbar navbar-expand navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <a href="/" className="navbar-brand">
-                        Library CRUD
-                    </a>
-                    <div className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <Link to={"/library"} className="nav-link">
-                                Libraries
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={"/book"} className="nav-link">
-                                Books
-                            </Link>
-                        </li>
-                    </div>
-                </div>
-            </nav>*/
